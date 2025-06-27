@@ -1,0 +1,441 @@
+/* إعدادات أساسية للغة العربية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+}
+
+body {
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #2c3e50;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* تجاوز الاتجاه للعناصر المعينة */
+.ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* خطوط متدرجة للعناوين */
+.gradient-text {
+  background: linear-gradient(45deg, #e91e63, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* بطاقات زجاجية */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* خلفيات متدرجة */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.pink-gradient {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* تأثيرات الحركة */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .glass-card {
+    margin: 8px;
+    border-radius: 15px;
+    padding: 12px;
+  }
+
+  /* تحسين النصوص للهواتف */
+  .arabic-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .arabic-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  /* تحسين الأزرار للهواتف */
+  .btn-primary {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    min-height: 44px; /* مساحة كافية للمس */
+  }
+
+  .btn-secondary {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    min-height: 44px;
+  }
+
+  /* تحسين المدخلات للهواتف */
+  .MuiTextField-root input {
+    font-size: 16px !important; /* منع التكبير في iOS */
+  }
+
+  .MuiTextField-root textarea {
+    font-size: 16px !important;
+  }
+
+  /* تحسين الأيقونات للهواتف */
+  .MuiIconButton-root {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* تحسين Safe Area للشاشات الحديثة */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .glass-card {
+    margin: 4px;
+    border-radius: 12px;
+    padding: 8px;
+  }
+
+  .arabic-text {
+    font-size: 0.85rem;
+  }
+
+  .arabic-title {
+    font-size: 1rem;
+  }
+
+  /* تقليل المسافات في الشاشات الصغيرة */
+  .MuiContainer-root {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #d81b60, #8e24aa);
+}
+
+/* تخصيص النصوص */
+.arabic-text {
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.arabic-title {
+  font-family: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* أزرار مخصصة */
+.btn-primary {
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #e91e63;
+  border-radius: 25px;
+  padding: 10px 22px;
+  color: #e91e63;
+  font-weight: 600;
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #e91e63;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* حالات التحميل */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* تصميم البطاقات الخاصة */
+.post-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(233, 30, 99, 0.2);
+}
+
+/* تحسينات النافيجيشن للهواتف */
+.mobile-app-bar {
+  height: 64px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(233, 30, 99, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-bottom-nav {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(233, 30, 99, 0.1);
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* تحسين التمرير للأجهزة المحمولة */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* تحسين اللمس للأجهزة المحمولة */
+.touch-friendly {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* تحسين الرسوم المتحركة للأداء */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* نقاط الدراغون المحسنة */
+.dragon-points {
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  min-width: 60px;
+  text-align: center;
+  font-family: 'Tajawal', 'Noto Sans Arabic', sans-serif;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* تصميم الأيقونات */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.icon-button:hover {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+  transform: scale(1.1);
+}
+
+/* تصميم الإدخالات */
+.input-field {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #333;
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #e91e63;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.input-field::placeholder {
+  color: rgba(51, 51, 51, 0.6);
+  font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
+}
+
+/* تصميم خاص للشعارات والإيموجي */
+.emoji-display {
+  font-size: 1.5em;
+  margin: 0 5px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.emoji-display:hover {
+  transform: scale(1.2);
+}
+
+/* تأثيرات خاصة للنقاط */
+.dragon-points {
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  color: #8b4513;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.dragon-points::before {
+  content: "🐉";
+  font-size: 1.2em;
+}
