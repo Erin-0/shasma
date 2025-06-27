@@ -12,8 +12,7 @@ import BottomNavigation from './components/BottomNavigation';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Layout
-import AppLayout from './AppLayout';
-
+//مسحت امه
 // Pages
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
