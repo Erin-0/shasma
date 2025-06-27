@@ -4,7 +4,7 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 
 // Context
-import { AuthProvider } from  './hooks/useAuth';
++ import { AuthProvider, useAuth } from './hooks/useAuth';
 
 // Components
 import TopAppBar from './components/AppBar';
