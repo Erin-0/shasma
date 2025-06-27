@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Box, CircularProgress, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 
 // Context
-import { AuthProvider, useAuth } from './hooks/useAuth';
+import { AuthProvider } from  './hooks/useAuth';
 
 // Components
 import TopAppBar from './components/AppBar';
 import BottomNavigation from './components/BottomNavigation';
 import ProtectedRoute from './components/ProtectedRoute';
+
+// Layout
+import AppLayout from './AppLayout';
 
 // Pages
 import LoginPage from './pages/LoginPage';
@@ -21,7 +24,8 @@ import ChatPage from './pages/ChatPage';
 import GamesPage from './pages/GamesPage';
 import StorePage from './pages/StorePage';
 import SettingsPage from './pages/SettingsPage';
-import { useEffect } from 'react';
+
+
 
 // Loading Component
 const LoadingScreen = () => (
@@ -167,30 +171,31 @@ const AppLayout = () => {
   );
 };
 
-// Main App Component
-const App = () => {
+function App() {
+  useEffect(() => {
+    console.log(
+      "%cأهاااا أخوي! تحاول تهكر التطبيق؟ 😏💣",
+      "font-size: 16px; color: #e91e63; font-weight: bold;"
+    );
+    console.log(
+      "%cشوف يا بطل، أنا متابع كل خطوة 🤫✨",
+      "color: #9c27b0; font-style: italic;"
+    );
+    console.log(
+      "%cرحم الله من عرف قدر أخيه 😎",
+      "color: #ffd700; font-size: 14px;"
+    );
+    console.log(
+      "%cبليييز لاااا 😭😭🙏🏻🙏🏻🙏🏻🙏🏻",
+      "color: rgb(255, 0, 0); font-size: 20px;"
+    );
+  }, []);
+
   return (
     <AuthProvider>
       <AppLayout />
     </AuthProvider>
   );
-};
-useEffect(() => {
-  console.log(
-    "%cأهاااا أخوي! تحاول تهكر التطبيق؟ 😏💣",
-    "font-size: 16px; color: #e91e63; font-weight: bold;"
-  );
-  console.log(
-    "%cشوف يا بطل، أنا متابع كل خطوة 🤫✨",
-    "color: #9c27b0; font-style: italic;"
-  );
-  console.log(
-    "%cرحم الله من عرف قدر أخيه 😎",
-    "color: #ffd700; font-size: 14px;"
-  );
-  console.log(
-    "%cبليييز لاااا 😭😭🙏🏻🙏🏻🙏🏻🙏🏻",
-    "color: rgb(255, 0, 0); font-size: 20px;"
-  );
-}, []);
+}
+
 export default App;
