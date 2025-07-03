@@ -66,17 +66,7 @@ body {
 }
 
 /* تأثيرات الحركة */
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp 0.8s ease-out;
-}
-
-.bounce-in {
-  animation: bounceIn 0.8s ease-out;
-}
+/*حدف*/
 
 @keyframes fadeIn {
   from {
@@ -89,28 +79,28 @@ body {
 
 @keyframes slideUp {
   from {
-    transform: translateY(30px);
+    /*حدف*/
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    /*حدف*/
     opacity: 1;
   }
 }
 
 @keyframes bounceIn {
   0% {
-    transform: scale(0.3);
+    /*حدف*/
     opacity: 0;
   }
   50% {
-    transform: scale(1.05);
+    /*حدف*/
   }
   70% {
-    transform: scale(0.9);
+    /*حدف*/
   }
   100% {
-    transform: scale(1);
+    /*حدف*/
     opacity: 1;
   }
 }
@@ -248,12 +238,12 @@ body {
   font-weight: 600;
   font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /*حدف*/
   box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
+  /*حدف*/
   box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
 }
 
@@ -266,13 +256,13 @@ body {
   font-weight: 600;
   font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /*حدف*/
 }
 
 .btn-secondary:hover {
   background: #e91e63;
   color: white;
-  transform: translateY(-2px);
+  /*حدف*/
 }
 
 /* حالات التحميل */
@@ -283,14 +273,15 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: #ffffff;
-  animation: spin 1s ease-in-out infinite;
+  /*حدف*/
 }
 
-@keyframes spin {
+/*@keyframes spin {
   to {
-    transform: rotate(360deg);
-  }
+    /*حدف*/
+  /*}
 }
+
 
 /* تصميم البطاقات الخاصة */
 .post-card {
@@ -300,11 +291,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: all 0.3s ease;
+  /*حدف*/
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
+  /*حدف*/
   box-shadow: 0 12px 40px rgba(233, 30, 99, 0.2);
 }
 
@@ -374,14 +365,14 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /*حدف*/
   color: #666;
 }
 
 .icon-button:hover {
   background: rgba(233, 30, 99, 0.1);
   color: #e91e63;
-  transform: scale(1.1);
+  /*حدف*/
 }
 
 /* تصميم الإدخالات */
@@ -395,7 +386,7 @@ body {
   color: #333;
   font-family: 'Noto Sans Arabic', 'Tajawal', sans-serif;
   font-size: 16px;
-  transition: all 0.3s ease;
+  /*حدف*/
 }
 
 .input-field:focus {
@@ -415,11 +406,11 @@ body {
   font-size: 1.5em;
   margin: 0 5px;
   display: inline-block;
-  transition: transform 0.3s ease;
+  /*حدف*/
 }
 
 .emoji-display:hover {
-  transform: scale(1.2);
+  /*حدف*/
 }
 
 /* تأثيرات خاصة للنقاط */
